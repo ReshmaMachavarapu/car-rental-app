@@ -18,7 +18,6 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: Build with Maven
-        run: |
-          cd car
-          mvn clean package
+      - name: Build Backend with Maven
+        working-directory: ./car
+        run: mvn clean install
